@@ -15,8 +15,6 @@ import play.api.routing.Router
 import play.filters.cors.CORSComponents
 import router.Routes
 
-import scala.concurrent.Future
-
 class MinimalApplicationLoader extends ApplicationLoader {
   override def load(context: Context): Application = {
     Logger.configure(context.environment)
