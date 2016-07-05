@@ -31,7 +31,7 @@ trait AppComponents extends BuiltInComponents
                        with CORSComponents
                        with ServicesModule
                        with ControllersModule
-                       with KamonComponentsMy {
+                       with KamonComponents {
 
   // ---- Play configurations:
   lazy val prefix: String = "/"
@@ -54,5 +54,5 @@ trait AppComponents extends BuiltInComponents
   // wanna be use, when refactoring into DBApi we can at same time use this way instead of java enums
   // lazy val defaultDatabase = dbApi.database("default")
 
-  kamonApi.register()
+  kamonApi // force instrumentation with Kamon to start
 }
