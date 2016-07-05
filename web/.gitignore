@@ -1,0 +1,16 @@
+/bin
+/.libs
+/target
+/dist
+logs/
+/project/target/
+/project/project/target/
+.idea/
+.idea_modules/
+.cache
+.worksheet/
+.DS_Store
+*.log
+db_dumps
+conf/generated.keystore
+scripts/.var/*
