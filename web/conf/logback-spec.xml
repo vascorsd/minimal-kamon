@@ -1,7 +1,7 @@
 <included>
 
     <!-- override the default value; or comment out to leave it at default ( ERROR ) -->
-    <property name="root.level" value="DEBUG" />
+    <property name="root.level" value="INFO" />
 
     <!--
       The logger name is typically the Java/Scala package name.
@@ -11,4 +11,6 @@
     <logger name="play" level="DEBUG" />
     <logger name="application" level="DEBUG" />
 
+    <!-- kamon is poluting logs with too much stuff now -.-" -->
+    <!--<logger name="kamon-akka.actor" level="WARN" />-->
 </included>

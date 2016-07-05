@@ -1,18 +1,21 @@
+import javax.inject.{Inject, Singleton}
+
 import services.ServicesModule
 import controllers.ControllersModule
-
 import com.softwaremill.macwire._
-
 import controllers.Assets
+import kamon.Kamon
 import play.api.ApplicationLoader.Context
 import play.api._
 import play.api.cache.EhCacheComponents
 import play.api.db.{DBComponents, HikariCPComponents}
 import play.api.i18n.I18nComponents
-import play.api.inject.{Injector, NewInstanceInjector, SimpleInjector}
+import play.api.inject.{ApplicationLifecycle, Injector, NewInstanceInjector, SimpleInjector}
 import play.api.routing.Router
 import play.filters.cors.CORSComponents
 import router.Routes
+
+import scala.concurrent.Future
 
 class MinimalApplicationLoader extends ApplicationLoader {
   override def load(context: Context): Application = {
@@ -51,6 +54,6 @@ trait AppComponents extends BuiltInComponents
 
   // wanna be use, when refactoring into DBApi we can at same time use this way instead of java enums
   // lazy val defaultDatabase = dbApi.database("default")
+
+  wire[KamonInstrumentation]
 }
-
-
