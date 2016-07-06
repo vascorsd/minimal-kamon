@@ -56,3 +56,7 @@ includeFilter in (Assets, LessKeys.less) := "*.less"
 excludeFilter in (Assets, LessKeys.less) := "_*.less"
 
 routesGenerator := InjectedRoutesGenerator
+
+//aspectjSettings
+//javaOptions in run <++= AspectjKeys.weaverOptions in Aspectj
+//fork in run := true
