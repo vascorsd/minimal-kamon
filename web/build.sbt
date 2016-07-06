@@ -54,13 +54,8 @@ libraryDependencies ++= Seq(
   
   "org.spire-math" %% "cats" % "0.3.0",
 
-  "io.kamon" %% "kamon-core" % kamonVersion,
-  "io.kamon" %% "kamon-statsd" % kamonVersion,
-  "io.kamon" %% "kamon-datadog" % kamonVersion,
-  "io.kamon" %% "kamon-scala" % kamonVersion,
   "io.kamon" %% "kamon-akka" % kamonVersion,
   "io.kamon" %% "kamon-play-24" % kamonVersion,
-  "io.kamon" %% "kamon-jdbc" % kamonVersion,
   "io.kamon" %% "kamon-log-reporter" % kamonVersion
 )
 
